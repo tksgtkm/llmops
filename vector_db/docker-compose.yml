@@ -1,0 +1,7 @@
+services:
+  workspace:
+    build:
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - .:/code
