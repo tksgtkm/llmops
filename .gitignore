@@ -218,3 +218,5 @@ __marimo__/
 .env
 
 esci-data/
+
+.vscode
