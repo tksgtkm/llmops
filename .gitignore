@@ -220,3 +220,5 @@ __marimo__/
 esci-data/
 
 .vscode
+
+.rag_data/

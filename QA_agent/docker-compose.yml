@@ -11,8 +11,8 @@ services:
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
-    volumes:
-      - ./.rag_data/es_data:/usr/share/elasticsearch/data
+    # volumes:
+    #   - ./.rag_data/es_data:/usr/share/elasticsearch/data
 
   qdrant:
     image: qdrant/qdrant:v1.11.3

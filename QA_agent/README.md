@@ -19,3 +19,8 @@ source .venv/bin/activate
 
 コンテナの起動
 make start.engine
+
+インデックス作成
+make create.index
+
+VSCodeはQA_agentのページだけを開くようにすること
