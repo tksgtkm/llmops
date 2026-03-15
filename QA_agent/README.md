@@ -21,6 +21,7 @@ source .venv/bin/activate
 make start.engine
 
 インデックス作成
+(コンテナ起動後にすぐに実行するとエラーが出てしまう、少し待ってから)
 make create.index
 
 VSCodeはQA_agentのページだけを開くようにすること
