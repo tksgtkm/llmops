@@ -100,10 +100,10 @@ class HelpDeskAgent:
             user_prompt = self.prompts.subtask_tool_selection_user_prompt.format(
                 question=state["question"],
                 plan=state["plan"],
-                subtask=state["subtack"]
+                subtask=state["subtask"]
             )
 
-            message = [
+            messages = [
                 {"role": "system", "content": self.prompts.subtask_system_prompt},
                 {"role": "user", "content": user_prompt}
             ]
@@ -142,7 +142,7 @@ class HelpDeskAgent:
         logger.info("Tool selecting complete!")
         messages.append(ai_messages)
 
-        return {"messages", messages}
+        return {"messages": messages}
     
     def execute_tools(self, state: AgentSubGraphState) -> dict:
         logger.info("Starting tool execution process...")
