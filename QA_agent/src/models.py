@@ -44,7 +44,7 @@ class ReflectionResult(BaseModel):
 class Subtask(BaseModel):
     task_name: str = Field(..., description="サブタスクの結果")
     tool_result: list[list[ToolResult]] = Field(..., description="サブタスクの結果")
-    refrection_results: list[ReflectionResult] = Field(
+    reflection_results: list[ReflectionResult] = Field(
         ..., description="サブタスクの評価結果"
     )
     is_completed: bool = Field(..., description="サブタスクが完了しているかどうか")
