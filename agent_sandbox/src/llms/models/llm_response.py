@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 class LLMResponse(BaseModel):
     messages: list
     content: str | BaseModel
-    model: set
+    model: str
     created_at: int
     input_tokens: int
     output_tokens: int

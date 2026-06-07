@@ -1,12 +1,14 @@
 import os
 import re
 import asyncio
+from pathlib import Path
 
 from dotenv import load_dotenv
 from openai import OpenAI
 from microsandbox import Sandbox
 
-load_dotenv()
+# load_dotenv(dotenv_path="../.env")
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
 
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY")
