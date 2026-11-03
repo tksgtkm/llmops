@@ -9,20 +9,41 @@ from src.llms.models.llm_response import LLMResponse
 load_dotenv()
 
 # https://developers.openai.com/api/docs/pricing
+
 COST = {
+    # GPT-6 series
+    "gpt-6-astra": {
+        "input": 10.0 / 1_000_000,
+        "output": 50.0 / 1_000_000,
+    },
+    "gpt-6.1-sol": {
+        "input": 2.0 / 1_000_000,
+        "output": 10.0 / 1_000_000,
+    },
+    "gpt-6.1-terra": {
+        "input": 1.0 / 1_000_000,
+        "output": 5.0 / 1_000_000,
+    },
+    "gpt-6-luna": {
+        "input": 0.1 / 1_000_000,
+        "output": 0.5 / 1_000_000,
+    },
+
+    # GPT-5 series
     "gpt-5.5": {
         "input": 5.0 / 1_000_000,
         "output": 30.0 / 1_000_000,
     },
     "gpt-5.5-pro": {
         "input": 30.0 / 1_000_000,
-        "output": 180.0 / 1_000_000
+        "output": 180.0 / 1_000_000,
     },
     "gpt-5.4": {
         "input": 2.5 / 1_000_000,
-        "output": 15.0 / 1_000_000
+        "output": 15.0 / 1_000_000,
     },
 }
+
 
 def _get_message(completion):
     message = next(

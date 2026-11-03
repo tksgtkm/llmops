@@ -16,5 +16,6 @@ async def main():
 
     print(output.stderr_text)
     await sandbox.stop_and_wait()
+    print('finished.')
 
 asyncio.run(main())
