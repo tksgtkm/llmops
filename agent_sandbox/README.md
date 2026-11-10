@@ -82,6 +82,13 @@ microVM 上で `print('Hello from microVM')` を実行する最小サンプル�
 uv run python scripts/sandbox.py
 ```
 
+ここでエラーが出た場合は以下の対応を行ってから、再度実行してしまう。
+
+```bash
+uv lock --upgrade-package microsandbox
+uv sync
+```
+
 ### OpenAI + microsandbox の連携
 
 OpenAI (`gpt-4o-mini`) にフィボナッチ数列を出力するコードを生成させ、microVM 上で実行して結果を表示します。
